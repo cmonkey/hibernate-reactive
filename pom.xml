@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.excavator.boot</groupId>
-	<artifactId>hibernate-recavator</artifactId>
+	<artifactId>hibernate-reactive</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hibernate-recavator</name>
+	<name>hibernate-reactive</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
