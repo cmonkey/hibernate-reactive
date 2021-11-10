@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HibernateRecavatorApplication {
+public class HibernateReactiveApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HibernateRecavatorApplication.class, args);
+		SpringApplication.run(HibernateReactiveApplication.class, args);
 	}
 
 }
