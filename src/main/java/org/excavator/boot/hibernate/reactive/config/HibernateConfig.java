@@ -1,6 +1,5 @@
-package org.excavator.boot.hibernaterecavator.config;
+package org.excavator.boot.hibernate.reactive.config;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
@@ -19,7 +18,7 @@ public class HibernateConfig {
     LocalSessionFactoryBean localSessionFactoryBean(){
         var sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource());
-        sessionFactoryBean.setPackagesToScan("org.excavator.boot.hibernaterecavator.entity");
+        sessionFactoryBean.setPackagesToScan("org.excavator.boot.hibernate.reactive.entity");
         sessionFactoryBean.setHibernateProperties(hibernateProperties());
 
         return sessionFactoryBean;
@@ -36,8 +35,8 @@ public class HibernateConfig {
 
     @Bean
     public DataSource dataSource() {
-        var dataSource = new MysqlDataSource();
-        dataSource.setUrl("jdbc:mysql://10.82.30.31:3306/hibernate_ractive");
+        var dataSource = new com.mysql.cj.jdbc.MysqlDataSource();
+        dataSource.setUrl("jdbc:mysql://10.82.30.31:3306/hibernate_reactive?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=true&allowMultiQueries=true");
         dataSource.setUser("root");
         dataSource.setPassword("root");
 
